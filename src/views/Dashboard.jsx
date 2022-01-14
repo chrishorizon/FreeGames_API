@@ -4,12 +4,12 @@ import axios from 'axios'
 const Dashboard = () => {
     const [title, setTitle] = useState({});
 
-    useEffect(() => {
-        fetch("https://www.freetogame.com/api/games")
-            .then(res => res.json())
-            .then(jsonRes => console.log(jsonRes))
-            .catch(err => console.log(err))
-    })
+    // useEffect(() => {
+    //     fetch("https://www.freetogame.com/api/games")
+    //         .then(res => res.json())
+    //         .then(jsonRes => console.log(jsonRes))
+    //         .catch(err => console.log(err))
+    // })
 
     return (
         <fieldset>
