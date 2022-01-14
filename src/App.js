@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
-import Form from './components/Form'
-import Dashboard from './views/Dashboard'
+import Form from './components/Form/Form'
+import Dashboard from './views/Dashboard/Dashboard'
 
 const App = () => {
     return (
