@@ -27,9 +27,9 @@ const Dashboard = () => {
                                         <h2>{game.title}</h2>
                                         <p>Free</p>
                                         <div className="allGames__container-card_description">
-                                            <p>{}</p>
+                                            <p>{game.short_description}</p>
                                             <div className="allGames__container-card_genre">
-                                                
+                                                <p>{}</p>
                                             </div>
                                         </div>
                                     </div>
