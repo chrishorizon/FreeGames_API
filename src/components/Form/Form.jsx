@@ -3,7 +3,7 @@ import React from 'react'
 const Form = () => {
     return (
         <fieldset>
-            <legend>Hello World</legend>
+            <legend>Form</legend>
         </fieldset>
     )
 }
