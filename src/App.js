@@ -8,14 +8,6 @@ const App = () => {
     return (
         <BrowserRouter>
             <Form />
-            {/* <ul>
-                <li>
-                    <Link to="/pc">PC</Link>
-                </li>
-                <li>
-                    <Link to="/browser">Browser</Link>
-                </li>
-            </ul> */}
             <Switch>
                 <Route path="/">
                     <Dashboard />
