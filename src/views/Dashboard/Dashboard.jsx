@@ -11,11 +11,10 @@ const Dashboard = () => {
                 console.log(res.data)
                 setGames(res.data)
 
-                let temp = games;
-                let a = "";
-                for(let ele of temp) {
-                    console.log(ele.genre);
-                }
+                // let temp = games;
+                // for(let ele of temp) {
+                //     console.log(ele.genre);
+                // }
             })
             .catch(err => console.log(err))
     }, [])

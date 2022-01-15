@@ -9,13 +9,13 @@ const App = () => {
         <BrowserRouter>
             <Form />
             <Switch>
-                <Route path="/">
+                <Route exact path="/">
                     <Dashboard />
                 </Route>
-                <Route exact path='/pc'>
+                <Route path="/pc">
                     <PC />
                 </Route>
-                <Route exact path='browser'>
+                <Route path="/browser">
                     <Browser />
                 </Route>
             </Switch>

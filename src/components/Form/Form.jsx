@@ -10,14 +10,14 @@ const Form = () => {
     const submitHandler = (e) => {
         e.preventDefault() // to prevent submitting request
         // Send user to /pc or /browser
-        history.push(`/${category}`)
+        category == "all" ? history.push('/') : history.push(`/${category}`)
     }
     
     return (
         <div>
             <form onSubmit={submitHandler}>
                 <select name="category" onChange={e => setCategory(e.target.value)}>
-                    <option value="">All</option>
+                    <option value="all">All</option>
                     <option value="pc">PC</option>
                     <option value="browser">Browser</option>
                 </select>
