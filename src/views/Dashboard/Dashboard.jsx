@@ -20,11 +20,14 @@ const Dashboard = () => {
                 return <div key={i}>
 
                         <section className='allGames__container-cards'>
-                            {/* <a href={game.game_url} className='allGames__container-url'> */}
                                 <div className="allGames__container-cards_img">
-                                    <img src={game.thumbnail} alt="image" />
+                                    <a href={game.game_url} className='allGames__container-url'>
+                                        <img src={game.thumbnail} alt="image" />
+                                    </a>
                                     <div className="allGames__container-cards_title">
-                                        <h2>{game.title}</h2>
+                                        <a href={game.game_url} className='allGames__container-url'>
+                                            <h2>{game.title}</h2>
+                                        </a>
                                         <p>Free</p>
                                         <div className="allGames__container-cards_description">
                                             <p>{game.short_description}</p>
@@ -35,7 +38,6 @@ const Dashboard = () => {
                                         </div>
                                     </div>
                                 </div>
-                            {/* </a> */}
                         </section>
                 </div>
             })}

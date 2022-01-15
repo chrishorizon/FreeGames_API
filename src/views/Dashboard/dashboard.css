@@ -9,11 +9,13 @@
 
 .allGames__container {
     width: 100%;
-    margin: 0 auto;
+    margin: auto;
     display: -webkit-flex;
     display: flex;
     -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
+
+    justify-content: center;
 }
 
 .allGames__container-cards {
@@ -32,7 +34,7 @@
 }
 
 .allGames__container-cards:hover {
-    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.2);
+    box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.3);
 }
 
 .allGames__container-cards_img img{
