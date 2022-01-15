@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
+import './dashboard.css'
 
 const Dashboard = () => {
     const [games, setGames] = useState([]);
@@ -21,22 +22,24 @@ const Dashboard = () => {
                     return <div key={i}>
                         <div className='allGames__container'>
                             <div className='allGames__container-card'>
-                                <a href={game.game_url} className='allGames__container-url'>
-                                    <div className="allGames__container-card_img">
-                                        <img src={game.thumbnail} alt="image" height={200} width={250} />
-                                        <div className="allGames__container-card_title">
-                                            <h2>{game.title}</h2>
-                                            <p>Free</p>
-                                            <div className="allGames__container-card_description">
-                                                <p>{game.short_description}</p>
-                                                <div className="allGames__container-card_genre">
-                                                    <p>{game.genre}</p>
-                                                    <p>{game.platform}</p>
+                                <div className="allGames__container-card_box">
+                                    <a href={game.game_url} className='allGames__container-url'>
+                                        <div className="allGames__container-card_img">
+                                            <img src={game.thumbnail} alt="image" />
+                                            <div className="allGames__container-card_title">
+                                                <h2>{game.title}</h2>
+                                                <p>Free</p>
+                                                <div className="allGames__container-card_description">
+                                                    <p>{game.short_description}</p>
+                                                    <div className="allGames__container-card_genre">
+                                                        <p>{game.genre}</p>
+                                                        <p>{game.platform}</p>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </a>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
