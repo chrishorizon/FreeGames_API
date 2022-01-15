@@ -1,19 +1,34 @@
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
+import { BrowserRouter, Switch, Route, Link } from 'react-router-dom'
 import Form from './components/Form/Form'
 import Dashboard from './views/Dashboard/Dashboard'
+import PC from './components/PC/PC'
+import Browser from './components/Browser/Browser'
 
 const App = () => {
     return (
-        <fieldset>
         <BrowserRouter>
-            <legend>App.js</legend>
             <Form />
-            <Routes>
-                <Route path="/" element={<Dashboard />} />
-            </Routes>
+            {/* <ul>
+                <li>
+                    <Link to="/pc">PC</Link>
+                </li>
+                <li>
+                    <Link to="/browser">Browser</Link>
+                </li>
+            </ul> */}
+            <Switch>
+                <Route path="/">
+                    <Dashboard />
+                </Route>
+                <Route exact path='/pc'>
+                    <PC />
+                </Route>
+                <Route exact path='browser'>
+                    <Browser />
+                </Route>
+            </Switch>
         
         </BrowserRouter>
-        </fieldset>
     )
 }
 
