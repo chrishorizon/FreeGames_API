@@ -24,8 +24,10 @@ const Dashboard = () => {
                                 <div className="allGames__container-card_img">
                                     <img src={game.thumbnail} alt="image" height={200} width={250} />
                                     <div className="allGames__container-card_title">
-                                        
+                                        <h2>{game.title}</h2>
+                                        <p>Free</p>
                                         <div className="allGames__container-card_description">
+                                            <p>{}</p>
                                             <div className="allGames__container-card_genre">
                                                 
                                             </div>
