@@ -3,12 +3,15 @@ import axios from 'axios'
 import './dashboard.css'
 
 const Dashboard = () => {
-    const [games, setGames] = useState([]);
+    const [games, setGames] = useState([]); // set all game data to variable
+
+    const [loading, setLoading] = useState(true); // loading variable true by default
 
     useEffect(() => {
         axios.get("https://www.freetogame.com/api/games")
             .then(res => {
                 console.log(res.data)
+                setLoading(false)
                 setGames(res.data)
 
                 // let temp = games;
@@ -18,6 +21,8 @@ const Dashboard = () => {
             })
             .catch(err => console.log(err))
     }, [])
+
+    if (loading) return "Loading..."
 
     return (
         <div className='allGames__container'>
