@@ -8,11 +8,12 @@
 /* Title */
 .allGames__category-title {
     text-align: center;
+    padding-top: 60px;
 }
 
 /* === Game Card === */
 
-.allGames__container {
+.allGames__category_container {
     width: 100%;
     margin: 0 auto;
     display: -webkit-flex;

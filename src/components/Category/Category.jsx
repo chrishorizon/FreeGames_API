@@ -26,7 +26,7 @@ const Category = () => {
     return (
         <>
             <h1 className='allGames__category-title' >{category.charAt(0).toUpperCase() + category.slice(1)} Games</h1>
-            <div className='allGames__container'>
+            <div className='allGames__category_container'>
             {
                 cat.map((c, idx) => {
                     return <div key={idx}>
