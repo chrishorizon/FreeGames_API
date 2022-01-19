@@ -12,7 +12,7 @@ const Category = () => {
     const [loading, setLoading] = useState(true) // default loading variable to true
 
     useEffect(() => {
-        axios.get(`https://www.freetogame.com/api/games?category=${category}`)
+        axios.get(`https://www.freetogame.com/api/games?category=${category}&sort-by=alphabetical`)
         .then(res => {
             console.log(res.data)
             setLoading(false)

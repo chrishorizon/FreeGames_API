@@ -8,7 +8,7 @@ const Dashboard = () => {
     const [loading, setLoading] = useState(true); // loading variable true by default
 
     useEffect(() => {
-        axios.get("https://www.freetogame.com/api/games")
+        axios.get("https://www.freetogame.com/api/games?soft-by=release-date")
             .then(res => {
                 console.log(res.data)
                 setLoading(false)
