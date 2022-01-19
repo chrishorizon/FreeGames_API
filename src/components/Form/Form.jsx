@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom'
+import { useHistory, Link } from 'react-router-dom'
 import "./form.css"
 
 const Form = () => {
@@ -17,7 +17,7 @@ const Form = () => {
     return (
         <div className='form__nav-container'>
             <div className='form__nav'>
-                <h1 className='nav__title'>Free Games List</h1>
+                <Link to="/" className='nav__title'>Free Games List</Link>
                 <form onSubmit={submitHandler} className='form__select'>
                     <select name="category" onChange={e => setCategory(e.target.value)}>
                         <option value="all">--Select Category--</option>
