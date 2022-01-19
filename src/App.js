@@ -1,8 +1,7 @@
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import Form from './components/Form/Form'
 import Dashboard from './views/Dashboard/Dashboard'
-import PC from './components/PC/PC'
-import Browser from './components/Browser/Browser'
+import Category from './components/Category/Category'
 
 const App = () => {
     return (
@@ -12,11 +11,8 @@ const App = () => {
                 <Route exact path="/">
                     <Dashboard />
                 </Route>
-                <Route path="/pc">
-                    <PC />
-                </Route>
-                <Route path="/browser">
-                    <Browser />
+                <Route path="/games/:category">
+                    <Category />
                 </Route>
             </Switch>
         
