@@ -31,7 +31,7 @@ const Category = () => {
                 cat.map((c, idx) => {
                     return <div key={idx}>
 
-                        <section className='allGames__container-cards'>
+                        <section className='allGames__container-cards_category'>
                             <div className="allGames__container-cards_img">
                                 <a href={c.game_url} className='allGames__container-url'>
                                     <img src={c.thumbnail} alt="image" />

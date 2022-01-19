@@ -8,6 +8,7 @@
 /* === Game Card === */
 
 .allGames__container {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     width: 100%;
     margin: 0 auto;
     padding-top: 60px;
@@ -15,6 +16,7 @@
     display: flex;
     -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
+    /* background: linear-gradient(90deg, rgba(10,9,41,1) 10%, rgba(11,9,42,1) 12%, rgba(54,0,80,1) 100%); */
 
     justify-content: center;
 }
@@ -25,8 +27,24 @@
     width: 350px;
     height: 350px;
     border-radius: 5px;
-    margin: 10px;
+    margin: 12px;
     overflow: hidden;
+    /* background: linear-gradient(90deg, rgba(10,9,41,1) 10%, rgba(11,9,42,1) 12%, rgba(54,0,80,1) 100%); */
+    color: whitesmoke;
+        /* ff 3.6+ */
+    background:-moz-radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 100%);
+
+    /* safari 5.1+,chrome 10+ */
+    background:-webkit-radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 100%);
+
+    /* opera 11.10+ */
+    background:-o-radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 100%);
+
+    /* ie 10+ */
+    background:-ms-radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 100%);
+
+    /* global 92%+ browsers support */
+    background:radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 100%);
 
     /* -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -43,3 +61,6 @@
     /* height: 70%; */
 }
 
+.allGames__container-url {
+    text-decoration: none;
+}
