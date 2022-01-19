@@ -19,7 +19,7 @@ const Category = () => {
 
     return (
         <div>
-            <h1>Games by Category</h1>
+            <h1>{category.charAt(0).toUpperCase() + category.slice(1)} Games</h1>
             {
                 cat.map((c, idx) => {
                     return <div key={idx}>
