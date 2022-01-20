@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
+import Pagination from '../../components/Pagination/Pagination'
 import './dashboard.css'
 
 const Dashboard = () => {
@@ -29,36 +30,39 @@ const Dashboard = () => {
     // Get current posts
     const indexOfLastPost = currentPage * postPerPage;
     const indexOfFirstPost = indexOfLastPost - postPerPage;
-    const currentP = games.slice(indexOfFirstPost, indexOfLastPost)
+    const currentPosts = games.slice(indexOfFirstPost, indexOfLastPost)
 
     return (
-        <div className='allGames__container'>
-            {currentP.map((game, i) => {
-                return <div key={i}>
+        <>
+            <div className='allGames__container'>
+                {currentPosts.map((game, i) => {
+                    return <div key={i}>
 
-                        <section className='allGames__container-cards'>
-                            <div className="allGames__container-cards_img">
-                                <a href={game.game_url} className='allGames__container-url'>
-                                    <img src={game.thumbnail} alt="image" />
-                                </a>
-                                <div className="allGames__container-cards_title">
+                            <section className='allGames__container-cards'>
+                                <div className="allGames__container-cards_img">
                                     <a href={game.game_url} className='allGames__container-url'>
-                                        <h2>{game.title}</h2>
+                                        <img src={game.thumbnail} alt="image" />
                                     </a>
-                                    <p>Free</p>
-                                    <div className="allGames__container-cards_description">
-                                        <p>{game.short_description}</p>
-                                        <div className="allGames__container-cards_genre">
-                                            <p>{game.genre}</p>
-                                            <p>{game.platform}</p>
+                                    <div className="allGames__container-cards_title">
+                                        <a href={game.game_url} className='allGames__container-url'>
+                                            <h2>{game.title}</h2>
+                                        </a>
+                                        <p>Free</p>
+                                        <div className="allGames__container-cards_description">
+                                            <p>{game.short_description}</p>
+                                            <div className="allGames__container-cards_genre">
+                                                <p>{game.genre}</p>
+                                                <p>{game.platform}</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </section>
-                </div>
-            })}
-        </div>
+                            </section>
+                    </div>
+                })}
+            </div>
+        <Pagination postPerPage={postPerPage} totalPosts={games.length} />
+        </>
     )
 }
 
