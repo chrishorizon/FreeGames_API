@@ -7,7 +7,7 @@ const Dashboard = () => {
     const [games, setGames] = useState([]); // set all game data to variable
     const [loading, setLoading] = useState(true); // loading variable true by default
     const [currentPage, setCurrentPage] = useState(1); // page number
-    const [postPerPage, setpostPerPage] = useState(25); // number of values rendered per page
+    const [postPerPage] = useState(25); // number of values rendered per page
 
     // Fetch API to render all games sorted by release date
     useEffect(() => {
@@ -31,6 +31,9 @@ const Dashboard = () => {
     const indexOfLastPost = currentPage * postPerPage;
     const indexOfFirstPost = indexOfLastPost - postPerPage;
     const currentPosts = games.slice(indexOfFirstPost, indexOfLastPost)
+
+    // Change Page
+    const paginate = (pageNumber) => setCurrentPage(pageNumber)
 
     return (
         <>
@@ -61,7 +64,11 @@ const Dashboard = () => {
                     </div>
                 })}
             </div>
-        <Pagination postPerPage={postPerPage} totalPosts={games.length} />
+            <Pagination 
+                postPerPage={postPerPage} 
+                totalPosts={games.length} 
+                paginate={paginate} 
+            />
         </>
     )
 }

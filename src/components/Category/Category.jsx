@@ -1,15 +1,17 @@
 import React, { useState, useEffect } from 'react'
 import { useHistory, useParams } from 'react-router-dom'
 import axios from 'axios'
+import Pagination from '../../components/Pagination/Pagination'
 import './category.css'
 
 const Category = () => {
 
     const {category} = useParams();
-
     const [cat, setCat] = useState([]); // variable to hold data from category params
-
     const [loading, setLoading] = useState(true) // default loading variable to true
+
+    const [currentPage, setCurrentPage] = useState(1); // page number
+    const [postPerPage] = useState(25); // number of values rendered per page
 
     useEffect(() => {
         axios.get(`https://www.freetogame.com/api/games?category=${category}&sort-by=alphabetical`)
@@ -23,12 +25,20 @@ const Category = () => {
 
     if (loading) return "Loading...";
 
+    // Get current posts
+    const indexOfLastPost = currentPage * postPerPage;
+    const indexOfFirstPost = indexOfLastPost - postPerPage;
+    const currentPosts = cat.slice(indexOfFirstPost, indexOfLastPost)
+
+    // Change Page
+    const paginate = (pageNumber) => setCurrentPage(pageNumber)
+
     return (
         <>
             <h1 className='allGames__category-title' >{category.charAt(0).toUpperCase() + category.slice(1)} Games</h1>
             <div className='allGames__category_container'>
             {
-                cat.map((c, idx) => {
+                currentPosts.map((c, idx) => {
                     return <div key={idx}>
 
                         <section className='allGames__container-cards_category'>
@@ -55,6 +65,11 @@ const Category = () => {
                 })
             }
             </div>
+            <Pagination 
+                postPerPage={postPerPage} 
+                totalPosts={cat.length} 
+                paginate={paginate} 
+            />
         </>
     )
 }
