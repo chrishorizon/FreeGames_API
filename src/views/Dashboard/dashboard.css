@@ -5,7 +5,7 @@
     outline: 0;
 }
 
-/* === Game Card === */
+/* Container / Page body */
 
 .allGames__container {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -17,9 +17,11 @@
     -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
     /* background: linear-gradient(90deg, rgba(10,9,41,1) 10%, rgba(11,9,42,1) 12%, rgba(54,0,80,1) 100%); */
-
+    
     justify-content: center;
 }
+
+/* === Game Card === */
 
 .allGames__container-cards {
     box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);

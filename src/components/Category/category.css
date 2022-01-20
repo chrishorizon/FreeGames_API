@@ -40,7 +40,7 @@
     
 }
 
-.allGames__container-cards:hover {
+.allGames__container-cards_category:hover {
     box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.3);
 }
 
