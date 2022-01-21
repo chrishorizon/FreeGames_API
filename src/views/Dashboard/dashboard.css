@@ -53,3 +53,21 @@
     text-decoration: none;
     color: black;
 }
+
+/* Card Body */
+.allGames__container-cards_title {
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+
+}
+
+.allGames__container-cards_title a {
+    margin-left: 10px;
+    margin-top: 3px;
+}
+
+.allGames__container-cards_title p {
+    margin-right: 10px;
+    margin-top: 10px;
+}

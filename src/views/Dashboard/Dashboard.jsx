@@ -51,12 +51,12 @@ const Dashboard = () => {
                                             <h2>{game.title}</h2>
                                         </a>
                                         <p>Free</p>
-                                        <div className="allGames__container-cards_description">
-                                            <p>{game.short_description}</p>
-                                            <div className="allGames__container-cards_genre">
-                                                <p>{game.genre}</p>
-                                                <p>{game.platform}</p>
-                                            </div>
+                                    </div>
+                                    <div className="allGames__container-cards_description">
+                                        <p>{game.short_description}</p>
+                                        <div className="allGames__container-cards_genre">
+                                            <p>{game.genre}</p>
+                                            <p>{game.platform}</p>
                                         </div>
                                     </div>
                                 </div>
