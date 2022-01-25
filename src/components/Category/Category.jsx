@@ -11,7 +11,7 @@ const Category = () => {
     const [loading, setLoading] = useState(true) // default loading variable to true
 
     const [currentPage, setCurrentPage] = useState(1); // page number
-    const [postPerPage] = useState(25); // number of values rendered per page
+    const [postPerPage] = useState(50); // number of values rendered per page
 
     useEffect(() => {
         axios.get(`https://www.freetogame.com/api/games?category=${category}&sort-by=alphabetical`)

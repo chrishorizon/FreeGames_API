@@ -2,12 +2,15 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import Pagination from '../../components/Pagination/Pagination'
 import './dashboard.css'
+import loadingImage from './loading.gif';
+;
+
 
 const Dashboard = () => {
     const [games, setGames] = useState([]); // set all game data to variable
     const [loading, setLoading] = useState(true); // loading variable true by default
     const [currentPage, setCurrentPage] = useState(1); // page number
-    const [postPerPage] = useState(25); // number of values rendered per page
+    const [postPerPage] = useState(50); // number of values rendered per page
 
     // Fetch API to render all games sorted by release date
     useEffect(() => {
@@ -25,7 +28,7 @@ const Dashboard = () => {
             .catch(err => console.log(err))
     }, [])
 
-    if (loading) return "Loading..."
+    if (loading) return loadingImage
 
     // Get current posts
     const indexOfLastPost = currentPage * postPerPage;
