@@ -9,7 +9,7 @@ const Dashboard = () => {
     const [games, setGames] = useState([]); // set all game data to variable
     const [loading, setLoading] = useState(true); // loading variable true by default
     const [currentPage, setCurrentPage] = useState(1); // page number
-    const [postPerPage] = useState(50); // number of values rendered per page
+    const [postPerPage] = useState(1000); // number of values rendered per page
 
     // Fetch API to render all games sorted by release date
     useEffect(() => {
@@ -28,7 +28,7 @@ const Dashboard = () => {
     }, [])
 
     if (loading) return (
-        <img src={loadingImage} alt="loading" />
+        <img className='loadingImg' src={loadingImage} alt="loading" />
     )
 
     // Get current posts

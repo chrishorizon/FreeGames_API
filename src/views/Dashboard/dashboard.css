@@ -54,6 +54,14 @@
     color: black;
 }
 
+/* Loading GIF */
+.loadingImg {
+    display: block;    /* Center content */
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
 /* Card Body */
 .allGames__container-cards_title {
     display: flex;
@@ -71,3 +79,4 @@
     margin-right: 10px;
     margin-top: 10px;
 }
+

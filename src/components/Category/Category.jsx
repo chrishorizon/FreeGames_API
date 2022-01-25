@@ -26,7 +26,7 @@ const Category = () => {
     }, [category])
 
     if (loading) return (
-        <img src={loadingImage} alt="loading" />
+        <img className='loadingImg' src={loadingImage} alt="loading" />
     );
 
     // Get current posts
