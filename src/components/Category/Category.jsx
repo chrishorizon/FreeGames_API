@@ -3,6 +3,8 @@ import { useHistory, useParams } from 'react-router-dom'
 import axios from 'axios'
 import Pagination from '../../components/Pagination/Pagination'
 import './category.css'
+import loadingImage from './loading.gif';
+
 
 const Category = () => {
 
@@ -23,7 +25,9 @@ const Category = () => {
         .catch(err => console.log(err))
     }, [category])
 
-    if (loading) return "Loading...";
+    if (loading) return (
+        <img src={loadingImage} alt="loading" />
+    );
 
     // Get current posts
     const indexOfLastPost = currentPage * postPerPage;

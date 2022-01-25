@@ -3,7 +3,6 @@ import axios from 'axios'
 import Pagination from '../../components/Pagination/Pagination'
 import './dashboard.css'
 import loadingImage from './loading.gif';
-;
 
 
 const Dashboard = () => {
@@ -28,7 +27,9 @@ const Dashboard = () => {
             .catch(err => console.log(err))
     }, [])
 
-    if (loading) return loadingImage
+    if (loading) return (
+        <img src={loadingImage} alt="loading" />
+    )
 
     // Get current posts
     const indexOfLastPost = currentPage * postPerPage;
