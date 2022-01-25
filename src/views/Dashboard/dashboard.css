@@ -76,7 +76,12 @@
 }
 
 .allGames__container-cards_title p {
-    margin-right: 10px;
+    margin-right: 15px;
     margin-top: 10px;
 }
 
+.allGames__container-cards_description {
+    width: 100%;
+    height: 46px;
+    overflow: auto;
+}
