@@ -22,12 +22,11 @@
 }
 
 /* === Game Card === */
-
 .allGames__container-cards {
     box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
     transition: 0.3s;
     width: 350px;
-    height: 350px;
+    height: 355px;
     border-radius: 5px;
     margin: 12px;
     overflow: hidden;
@@ -52,6 +51,7 @@
 .allGames__container-url {
     text-decoration: none;
     color: black;
+
 }
 
 /* === Loading GIF === */
@@ -65,24 +65,27 @@
 /* === Card Body ==== */
 .allGames__container-cards_title {
     display: flex;
-    /* align-items: center; */
+    align-items: center;
     justify-content: space-between;
+    margin-top: 10px;
 }
 
-.allGames__container-cards_title a {
+.allGames__container-cards_title a h5 {
     margin-left: 10px;
-    margin-top: 3px;
+    /* margin-top: 10px; */
+    font-size: 1.1rem;
 }
 
 .allGames__container-cards_title p {
     margin-right: 15px;
-    margin-top: 10px;
+    /* margin-top: 10px; */
 }
 
-/* === Scroll Bar === */
+/* === Description w/ Scroll Bar === */
 .allGames__container-cards_description {
-    width: 100%;
-    height: 46px;
+    width: 97%;
+    height: 70px;
+    margin-left: 10px;
     overflow: auto;
 }
 
@@ -104,4 +107,12 @@
 
 ::-webkit-scrollbar-thumb:hover {
     background: linear-gradient(0deg, rgb(214, 129, 0) 0%, rgb(87, 0, 107) 100%);
+}
+
+/* === Card Genre and Platform === */
+.allGames__container-cards_genre {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 10px;
 }

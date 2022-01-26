@@ -52,7 +52,7 @@ const Dashboard = () => {
                                     </a>
                                     <div className="allGames__container-cards_title">
                                         <a href={game.game_url} className='allGames__container-url'>
-                                            <h2>{game.title}</h2>
+                                            <h5>{game.title}</h5>
                                         </a>
                                         <p>Free</p>
                                     </div>
