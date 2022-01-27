@@ -59,7 +59,6 @@
     display: block;    /* Center content */
     margin-left: auto;
     margin-right: auto;
-
 }
 
 /* === Card Body ==== */
@@ -90,7 +89,8 @@
     background: linear-gradient(180deg, rgba(255,153,0,1) 57%, rgba(255,189,90,1) 100%);
     width: 38px;
     padding-left: 5px;
-    border-radius: 5px;
+    border-radius: 3px;
+    cursor: default;
 }
 
 /* === Description w/ Scroll Bar === */
@@ -99,6 +99,7 @@
     height: 70px;
     margin-left: 10px;
     overflow: auto;
+    cursor: default;
 }
 
 /* Scrollbar styles */
@@ -135,10 +136,12 @@
     background: linear-gradient(180deg, rgba(116,21,206,1) 49%, rgba(164,66,255,1) 100%);
     color: white;
     font-weight: bold;
-    border-radius: 5px;
+    border-radius: 3px;
     padding: 0px 5px;
+    cursor: default;
 }
 
 .platform-tag {
     font-size: .9rem;
+    cursor: default;
 }
