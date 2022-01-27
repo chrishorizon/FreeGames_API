@@ -9,7 +9,7 @@ const Dashboard = () => {
     const [games, setGames] = useState([]); // set all game data to variable
     const [loading, setLoading] = useState(true); // loading variable true by default
     const [currentPage, setCurrentPage] = useState(1); // page number
-    const [postPerPage] = useState(100); // number of values rendered per page
+    const [postPerPage] = useState(75); // number of values rendered per page
 
     // Fetch API to render all games sorted by release date
     useEffect(() => {
