@@ -60,8 +60,8 @@ const Dashboard = () => {
                                         <p>{game.short_description}</p>
                                     </div>
                                     <div className="allGames__container-cards_genre">
-                                        <span>{game.genre}</span>
-                                        <span>{game.platform}</span>
+                                        <span className='genre-tag'>{game.genre}</span>
+                                        <span className='platform-tag'>{game.platform}</span>
                                     </div>
                                 </div>
                             </section>

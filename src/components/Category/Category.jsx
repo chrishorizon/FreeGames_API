@@ -45,23 +45,23 @@ const Category = () => {
                 currentPosts.map((c, idx) => {
                     return <div key={idx}>
 
-                        <section className='allGames__container-cards_category'>
+                        <section className='allGames__container-cards'>
                             <div className="allGames__container-cards_img">
                                 <a href={c.game_url} className='allGames__container-url'>
                                     <img src={c.thumbnail} alt="image" />
                                 </a>
                                 <div className="allGames__container-cards_title">
                                     <a href={c.game_url} className='allGames__container-url'>
-                                        <h2>{c.title}</h2>
+                                        <h5>{c.title}</h5>
                                     </a>
                                     <p>Free</p>
-                                    <div className="allGames__container-cards_description">
-                                        <p>{c.short_description}</p>
-                                        <div className="allGames__container-cards_genre">
-                                            <p>{c.genre}</p>
-                                            <p>{c.platform}</p>
-                                        </div>
-                                    </div>
+                                </div>
+                                <div className="allGames__container-cards_description">
+                                    <p>{c.short_description}</p>
+                                </div>
+                                <div className="allGames__container-cards_genre">
+                                    <span className='genre-tag'>{c.genre}</span>
+                                    <span className='platform-tag'>{c.platform}</span>
                                 </div>
                             </div>
                         </section>

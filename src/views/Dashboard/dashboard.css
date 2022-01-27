@@ -73,14 +73,21 @@
 .allGames__container-cards_title a h5 {
     margin-left: 10px;
     font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.allGames__container-cards_title a h5:hover {
+    margin-left: 10px;
+    font-size: 1.1rem;
+    color: #ff8800;
 }
 
 .allGames__container-cards_title p {
     font-size: .9rem;
     font-weight: bold;
-    margin-right: 15px;
+    margin-right: 10px;
     color: white;
-    background-color: #ff9900;
+    background: linear-gradient(180deg, rgba(255,153,0,1) 57%, rgba(255,189,90,1) 100%);
     width: 38px;
     padding-left: 5px;
     border-radius: 5px;
@@ -120,4 +127,18 @@
     justify-content: space-between;
     align-items: center;
     margin: 5px 10px;
+}
+
+.genre-tag {
+    /* background-color: #7415ce; */
+    font-size: .8rem;
+    background: linear-gradient(180deg, rgba(116,21,206,1) 49%, rgba(164,66,255,1) 100%);
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 0px 5px;
+}
+
+.platform-tag {
+    font-size: .9rem;
 }

@@ -24,29 +24,3 @@
 
     justify-content: center;
 }
-
-.allGames__container-cards_category {
-    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
-    transition: 0.3s;
-    width: 350px;
-    height: 350px;
-    border-radius: 5px;
-    margin: 10px;
-    overflow: hidden;
-
-    /* -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box; */
-    
-}
-
-.allGames__container-cards_category:hover {
-    box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.3);
-}
-
-.allGames__container-cards_img img{
-    width: 100%;
-    /* height: 70%; */
-}
-
-
