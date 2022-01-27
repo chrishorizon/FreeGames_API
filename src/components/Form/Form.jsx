@@ -22,7 +22,7 @@ const Form = () => {
                 <Link to="/games/alphabetical" className='alpha-link'>A-Z</Link>
                     <select className='select-box' name="category" onChange={e => setCategory(e.target.value)}>
                         <option value="all">--Select Category--</option>
-                        <option value="all">All</option>
+                        <option value="all">All Games</option>
                         <option value="action-rpg">Action RPG</option>
                         <option value="action">Action</option>
                         <option value="anime">Anime</option>
