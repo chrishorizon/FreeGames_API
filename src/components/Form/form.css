@@ -39,14 +39,15 @@
 
 /* === Select Bar and Button === */
 .select-box {
-    background-color: rgb(255, 255, 255);
+    /* background-color: rgb(255, 255, 255); */
+    background: linear-gradient(180deg, #ffffff 40%, #d6d6d6 100%);
     padding: 5px 10px;
     margin-right: 5px;
     border-radius: 2px;
 }
 
 .select-box-button {
-    background: linear-gradient(180deg, rgba(105,0,204,1) 0%, rgba(164,66,255,1) 100%);
+    background: linear-gradient(180deg, rgb(105, 0, 204) 0%, rgba(164,66,255,1) 100%);
     color: white;
     border-radius: 5px;
     padding: 5px 5px;
@@ -57,4 +58,15 @@
     color: white;
     border-radius: 5px;
     padding: 5px 5px;
+}
+
+@media (max-width: 30em) {
+    .nav__title {
+        font-size: 0px;
+    }
+
+    .form__select {
+        position: fixed;
+        inset: 0 0 0 35%;
+    }
 }
