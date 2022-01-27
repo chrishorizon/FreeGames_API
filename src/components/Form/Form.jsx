@@ -4,20 +4,13 @@ import "./form.css"
 
 const Form = () => {
     
-    const [category, setCategory] = useState();
+    const [category, setCategory] = useState("");
 
     const history = useHistory();
 
     const submitHandler = (e) => {
         e.preventDefault() // to prevent submitting request
         // Send user to /pc or /browser
-        // if(category == "all"){
-        //     history.push('/')
-        // } else if(category == "alpha") {
-        //     history.push("/games/alphabetical")
-        // } else {
-        //     history.push(`/games/${category}`)
-        // }
         category == "all" ? history.push('/') : history.push(`/games/${category}`)
     }
     

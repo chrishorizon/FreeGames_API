@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import Pagination from '../../components/Pagination/Pagination'
 import loadingImage from './loading.gif';
+import './alpha.css'
 
 const Alpha = () => {
     const [games, setGames] = useState([]); // set all game data to variable
@@ -17,10 +18,6 @@ const Alpha = () => {
                 setLoading(false)
                 setGames(res.data)
 
-                // let temp = games;
-                // for(let ele of temp) {
-                //     console.log(ele.genre);
-                // }
             })
             .catch(err => console.log(err))
     }, [])
@@ -37,10 +34,10 @@ const Alpha = () => {
     // Change Page
     const paginate = (pageNumber) => setCurrentPage(pageNumber)
 
-
     return (
         <>
-            <div className='allGames__container'>
+            <h1 className='alpha-title'>All Games Alphabetical</h1>
+            <div className='allGames__category_container'>
                 {currentPosts.map((game, i) => {
                     return <div key={i}>
 
