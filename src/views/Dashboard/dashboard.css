@@ -72,13 +72,18 @@
 
 .allGames__container-cards_title a h5 {
     margin-left: 10px;
-    /* margin-top: 10px; */
     font-size: 1.1rem;
 }
 
 .allGames__container-cards_title p {
+    font-size: .9rem;
+    font-weight: bold;
     margin-right: 15px;
-    /* margin-top: 10px; */
+    color: white;
+    background-color: #ff9900;
+    width: 38px;
+    padding-left: 5px;
+    border-radius: 5px;
 }
 
 /* === Description w/ Scroll Bar === */
