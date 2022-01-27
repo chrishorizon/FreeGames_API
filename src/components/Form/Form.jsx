@@ -11,14 +11,22 @@ const Form = () => {
     const submitHandler = (e) => {
         e.preventDefault() // to prevent submitting request
         // Send user to /pc or /browser
+        // if(category == "all"){
+        //     history.push('/')
+        // } else if(category == "alpha") {
+        //     history.push("/games/alphabetical")
+        // } else {
+        //     history.push(`/games/${category}`)
+        // }
         category == "all" ? history.push('/') : history.push(`/games/${category}`)
     }
     
     return (
         <div className='form__nav-container'>
             <nav className='form__nav'>
-                <Link to="" className='nav__title'>Games Vault</Link>
+                <Link to="/" className='nav__title'>Games Vault</Link>
                 <form onSubmit={submitHandler} className='form__select '>
+                <Link to="/games/alphabetical" className='alpha-link'>A-Z</Link>
                     <select className='select-box' name="category" onChange={e => setCategory(e.target.value)}>
                         <option value="all">--Select Category--</option>
                         <option value="all">All</option>

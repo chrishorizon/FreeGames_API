@@ -16,7 +16,7 @@
     height: 50px;
     padding-bottom: 5px;
     /* margin: 0 auto; */
-    box-shadow: 2px 4px 4px 2px rgba(44, 44, 44, 0.5);
+    box-shadow: 0px 4px 10px rgba(44, 44, 44, 0.5);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -67,6 +67,19 @@
     padding: 5px 5px;
 }
 
+.alpha-link {
+    text-decoration: none;
+    margin-right: 10px;
+    color: white;
+    
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(180deg, rgba(255,153,0,1) 57%, rgba(255,189,90,1) 100%);
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+/* === Mobile Responsive Nav Bar === */
 @media (max-width: 30em) {
     .nav__title {
         font-size: 0px;

@@ -8,6 +8,7 @@ import loadingImage from './loading.gif';
 
 const Category = () => {
 
+    const history = useHistory();
     const {category} = useParams();
     const [cat, setCat] = useState([]); // variable to hold data from category params
     const [loading, setLoading] = useState(true) // default loading variable to true
@@ -22,7 +23,7 @@ const Category = () => {
             setLoading(false)
             setCat(res.data)
         })
-        .catch(err => console.log(err))
+        .catch(err => history.push("/"))
     }, [category])
 
     if (loading) return (

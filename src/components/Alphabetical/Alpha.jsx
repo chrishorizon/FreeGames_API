@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import Pagination from '../../components/Pagination/Pagination'
-import './dashboard.css'
 import loadingImage from './loading.gif';
 
-
-const Dashboard = () => {
+const Alpha = () => {
     const [games, setGames] = useState([]); // set all game data to variable
     const [loading, setLoading] = useState(true); // loading variable true by default
     const [currentPage, setCurrentPage] = useState(1); // page number
@@ -13,7 +11,7 @@ const Dashboard = () => {
 
     // Fetch API to render all games sorted by release date
     useEffect(() => {
-        axios.get("https://www.freetogame.com/api/games?sort-by=release-date")
+        axios.get("https://www.freetogame.com/api/games?sort-by=alphabetical")
             .then(res => {
                 console.log(res.data)
                 setLoading(false)
@@ -38,6 +36,7 @@ const Dashboard = () => {
 
     // Change Page
     const paginate = (pageNumber) => setCurrentPage(pageNumber)
+
 
     return (
         <>
@@ -75,6 +74,6 @@ const Dashboard = () => {
             />
         </>
     )
-}
+};
 
-export default Dashboard
+export default Alpha;
