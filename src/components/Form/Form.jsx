@@ -17,9 +17,9 @@ const Form = () => {
     return (
         <div className='form__nav-container'>
             <div className='form__nav'>
-                <Link to="/" className='nav__title'>Free Games</Link>
-                <form onSubmit={submitHandler} className='form__select'>
-                    <select name="category" onChange={e => setCategory(e.target.value)}>
+                <Link to="/" className='nav__title'>Games Vault</Link>
+                <form onSubmit={submitHandler} className='form__select '>
+                    <select className='select-box' name="category" onChange={e => setCategory(e.target.value)}>
                         <option value="all">--Select Category--</option>
                         <option value="all">All</option>
                         <option value="action-rpg">Action RPG</option>
@@ -45,7 +45,7 @@ const Form = () => {
                         <option value="tower-defense">Tower Defense</option>
                         <option value="zombie">Zombie</option>
                     </select>
-                    <button>Search</button>
+                    <button className='select-box-button'>Search</button>
                 </form>
             </div>
         </div>

@@ -5,6 +5,8 @@
     outline: 0;
 }
 
+/* === Nav Bar === */
+
 .form__nav {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: linear-gradient(90deg, rgba(114,0,139,1) 10%, rgba(227,148,29,1) 100%);
@@ -31,5 +33,28 @@
 }
 
 .form__select {
+    margin-top: 5px;
     padding-right: 5vw;
+}
+
+/* === Select Bar and Button === */
+.select-box {
+    background-color: rgb(255, 255, 255);
+    padding: 5px 10px;
+    margin-right: 5px;
+    border-radius: 2px;
+}
+
+.select-box-button {
+    background: linear-gradient(180deg, rgba(105,0,204,1) 0%, rgba(164,66,255,1) 100%);
+    color: white;
+    border-radius: 5px;
+    padding: 5px 5px;
+}
+
+.select-box-button:hover {
+    background: linear-gradient(180deg, rgb(142, 34, 243) 0%, rgb(182, 104, 255) 100%);
+    color: white;
+    border-radius: 5px;
+    padding: 5px 5px;
 }
