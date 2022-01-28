@@ -47,7 +47,7 @@ const Category = () => {
                     return <div key={idx}>
 
                         <section className='allGames__container-cards'>
-                            <div className="allGames__container-cards_img">
+                            <div className="allGames__container-cards_header">
                                 <a href={c.game_url} className='allGames__container-url'>
                                     <img src={c.thumbnail} alt="image" />
                                 </a>

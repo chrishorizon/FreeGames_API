@@ -46,7 +46,7 @@ const Dashboard = () => {
                     return <div key={i}>
 
                             <section className='allGames__container-cards'>
-                                <div className="allGames__container-cards_img">
+                                <div className="allGames__container-cards_header">
                                     <a href={game.game_url} className='allGames__container-url'>
                                         <img src={game.thumbnail} alt="image" />
                                     </a>
