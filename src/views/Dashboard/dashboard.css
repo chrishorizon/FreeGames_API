@@ -16,14 +16,14 @@
     display: flex;
     -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
-    /* background: linear-gradient(90deg, rgba(10,9,41,1) 10%, rgba(11,9,42,1) 12%, rgba(54,0,80,1) 100%); */
+    /* background: linear-gradient(90deg, #0a0929 10%, rgba(11,9,42,1) 12%, #0a0929 100%); */
     
     justify-content: center;
 }
 
 /* === Game Card === */
 .allGames__container-cards {
-    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+    box-shadow: 5px 5px 10px rgba(30, 0, 70, 0.397);
     transition: 0.3s;
     width: 350px;
     height: 355px;
@@ -40,7 +40,7 @@
 }
 
 .allGames__container-cards:hover {
-    box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.4);
+    box-shadow: 10px 10px 10px rgba(46, 0, 77, 0.445);
 }
 
 .allGames__container-cards_img img{
