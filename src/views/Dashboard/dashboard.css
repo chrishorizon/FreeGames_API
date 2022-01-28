@@ -30,6 +30,7 @@
     border-radius: 5px;
     margin: 12px;
     overflow: hidden;
+    transition: .3s;
     /* background: linear-gradient(90deg, rgba(10,9,41,1) 10%, rgba(11,9,42,1) 12%, rgba(54,0,80,1) 100%); */
     /* color: whitesmoke; */
 
@@ -41,6 +42,7 @@
 
 .allGames__container-cards:hover {
     box-shadow: 10px 10px 10px rgba(46, 0, 77, 0.445);
+    transform: translateY(-3px);
 }
 
 .allGames__container-cards_img img{

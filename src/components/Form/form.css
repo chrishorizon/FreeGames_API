@@ -21,6 +21,7 @@
     justify-content: space-between;
     align-items: center;
     position: fixed;
+    z-index: 1;
 }
 
 .nav__title {
@@ -85,16 +86,18 @@
 }
 
 /* === Mobile Responsive Nav Bar === */
-@media (max-width: 30em) {
+@media (max-width: 766px) {
     .nav__title {
         font-size: 0px;
     }
 
     .form__select {
-        position: fixed;
-        inset: 0 0 0 35%;
+        /* position: fixed; */
+        /* inset: 0 0 0 35%; */
     }
 }
+
+
 
 /* === Animation Vibrate-1 === */
 @-webkit-keyframes nav__title {
