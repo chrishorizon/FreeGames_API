@@ -17,7 +17,7 @@ const Form = () => {
     return (
         <div className='form__nav-container'>
             <nav className='form__nav'>
-                <Link to="/" className='nav__title'>Games Vault</Link>
+                <Link to="/" className='nav__title'>GAMES VAULT</Link>
                 <form onSubmit={submitHandler} className='form__select '>
                 <Link to="/games/alphabetical" className='alpha-link'>A-Z</Link>
                     <select className='select-box' name="category" onChange={e => setCategory(e.target.value)}>
